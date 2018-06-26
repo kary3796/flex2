@@ -1,0 +1,179 @@
+
+
+html {
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.navbar {
+    background: #415068;
+}
+.navbar div {
+    display: none;
+}
+
+.navbar .toggle,
+.navbar .brand {
+    display: inline-block;
+}
+
+.navbar .link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: #223047;
+    color: white;
+}
+
+.navbar .link:hover,
+.navbar .link:active {
+    color: #223047;
+    background: white;
+}
+
+.navbar .brand {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .toggle {
+    padding: 1em;
+    color: black;
+}
+
+@media (min-width: 48em) {
+    .navbar {
+        display: flex;
+    }
+    .navbar .left,
+    .navbar .right {
+        display: flex;
+        flex: 1;
+    }
+    .navbar .link {
+        width: auto;
+    }
+    .navbar .right {
+        justify-content: flex-end;
+    }
+    .navbar .toggle {
+        display: none;
+    }
+}
+
+@media (min-width: 48em) {
+    .navbar div {
+        display: flex;
+    }
+}
+
+@media (max-width: 48em) {
+    .navbar.active .toggle {
+        background: #223047;
+        color: white;
+    }
+
+    .navbar .brand {
+        text-align: left;
+    }
+
+    .navbar.active div {
+        display: block;
+    }
+}
+
+ .container {
+    display: flex;
+}
+
+.container .item {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.container .item .content {
+    display: flex;
+}
+
+.container .item .content .metadata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.container .item .content .metadata .title {
+    margin: 5px;
+}
+
+.item.featured {
+    flex: auto;
+}
+
+.item.associated {
+    flex: initial;
+}
+
+@media (max-width: 48em) {
+    .container {
+        justify-content: left;
+    }
+}
+
+ .container {
+    display: flex;
+}
+
+.photos {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*.photo-size {
+    height: 180px;
+    width: 180px;
+    padding: 5px;
+}*/
+
+.blogpost-link {
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+}
+
+a:hover {
+    color:steelblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*$modeling: 'actress', 'alice', 'baby', 'basket-baby', 'beach', 'besties', 'bird=girl', 'black-and-white', 'boats', 'candles',  'chic', 'city';
+@each $model-name in $modeling {
+    .model-#{$model-name} {
+        background-image: jpg($modeling.jpg);
+        background-repeat: no-repeat;
+        height: 180px;
+        width: 180px;
+        padding: 5px;
+    }
+}*/
