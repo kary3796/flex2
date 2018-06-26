@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+            crossorigin="anonymous"></script>
+
+    <style>
+        html {
+            font-family: 'Oxygen', sans-serif;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .navbar {
+            background: #415068;
+        }
+        .navbar div {
+            display: none;
+        }
+
+        .navbar .toggle,
+        .navbar .brand {
+            display: inline-block;
+        }
+
+        .navbar .link {
+            display: block;
+            text-align: center;
+            padding: 1em;
+            text-decoration: none;
+            background: #223047;
+            color: white;
+        }
+
+        .navbar .link:hover,
+        .navbar .link:active {
+            color: #223047;
+            background: white;
+        }
+
+        .navbar .brand {
+            width: 10em;
+            text-align: center;
+            padding: 1em;
+            color: white;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .navbar .toggle {
+            padding: 1em;
+            color: black;
+        }
+
+        @media (min-width: 48em) {
+            .navbar {
+                display: flex;
+            }
+            .navbar .left,
+            .navbar .right {
+                display: flex;
+                flex: 1;
+            }
+            .navbar .link {
+                width: auto;
+            }
+            .navbar .right {
+                justify-content: flex-end;
+            }
+            .navbar .toggle {
+                display: none;
+            }
+        }
+
+        @media (min-width: 48em) {
+            .navbar div {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 48em) {
+            .navbar.active .toggle {
+                background: #223047;
+                color: white;
+            }
+
+            .navbar .brand {
+                text-align: left;
+            }
+
+            .navbar.active div {
+                display: block;
+            }
+        }
+
+         .container {
+            display: flex;
+        }
+
+        .container .item {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .container .item .content {
+            display: flex;
+        }
+
+        .container .item .content .metadata {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 20px;
+        }
+
+        .container .item .content .metadata .title {
+            margin: 5px;
+        }
+
+        .item.featured {
+            flex: auto;
+        }
+
+        .item.associated {
+            flex: initial;
+        }
+
+        @media (max-width: 48em) {
+            .container {
+                justify-content: left;
+            }
+        }
+
+         .container {
+            display: flex;
+        }
+
+        .photos {
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .photo-size {
+            height: 180px;
+            width: 180px;
+            padding: 5px;
+        }
+
+        .blogpost-link {
+            font-size: 2em;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            margin: 10px;
+        }
+
+        a:hover {
+            color:steelblue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#" class="toggle" id="navHamburger">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a href="#" class="brand">PhotographyFun <i class="fas fa-camera"></i></a>
+        <div class="left">
+            <a href="https://parachut.co" class="link">Parachut.co</a>
+            <a href="http://photographycourse.net/beginner-photography/" class="link">Beginner Photography Course</a>
+            <a href="https://www.omnicoreagency.com/best-cameras-for-travel-instagram/" class="link">Cameras</a>
+            <a href="#" class="link">Blogposts</a>
+
+        </div>
+        <div class="right">
+            <a href="https://www.instagram.com/instagram/?hl=en" class="link">Instagram</a>
+        </div>
+    </div>
+    <div class="rest-of-page">
+            <div class='container'>
+                    <div class='item featured'>
+                        <div class='content'>
+                            <img src='photo shoot.jpg' width='200px'
+                                height='120px'>
+                            <div class='metadata'>
+                                <a href="#" class="blogpost-link">How to do a Photoshoot</a>
+                                <h3>By: Karli West</h3>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class='item associated'>
+                        <div class='content'>
+                            <img src='model.jpg' width='200px' height='120px'>
+                            <div class='metadata'>
+                                <a href="#" class="blogpost-link">Modeling: 101</a>
+                                <h3>By: Melanie Macks</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        <div class="photos">
+                <img src = "alice.jpg" alt="" class="photo-size">
+                <img src = "dancer.jpg" alt="" class="photo-size">
+                <img src = "ferns.jpg" alt="" class="photo-size">
+                <img src = "fire-girl.jpg" alt="" class="photo-size">
+                <img src = "kid.jpg" alt="" class="photo-size">
+                <img src = "sunglasses.jpg" alt="" class="photo-size">
+                <img src = "doorway.jpg" alt="" class="photo-size">
+                <img src = "baby.jpg" alt="" class="photo-size">
+                <img src = "lights.jpg" alt="" class="photo-size">
+                <img src = "fire-man.jpg" alt="" class="photo-size">
+                <img src = "gold-photo.jpg" alt="" class="photo-size">
+                <img src = "beach.jpg" alt="" class="photo-size">
+                <img src = "bird-girl.jpg" alt="" class="photo-size">
+                <img src = "chic.jpg" alt="" class="photo-size">
+                <img src = "city.jpg" alt="" class="photo-size">
+                <img src = "clothes.jpg" alt="" class="photo-size">
+                <img src = "crazt.jpg" alt="" class="photo-size">
+                <img src = "cute.jpg" alt="" class="photo-size">
+                <img src = "dapper-baby.jpg" alt="" class="photo-size">
+                <img src = "deer.jpg" alt="" class="photo-size">
+                <img src = "desert garden.jpg" alt="" class="photo-size">
+                <img src = "flowers.jpg" alt="" class="photo-size">
+                <img src = "fall-baby.jpg" alt="" class="photo-size">
+                <img src = "glitter-kid.jpg" alt="" class="photo-size">
+                <img src = "group-wedding.jpg" alt="" class="photo-size">
+                <img src = "hair.jpg" alt="" class="photo-size">
+                <img src = "laying-down.jpg" alt="" class="photo-size">
+                <img src = "model.jpg" alt="" class="photo-size">
+                <img src = "mom&kid.jpg" alt="" class="photo-size">
+                <img src = "party.jpg" alt="" class="photo-size">
+                <img src = "sand.jpg" alt="" class="photo-size">
+                <img src = "sisters.jpg" alt="" class="photo-size">
+                <img src = "sunglasses.jpg" alt="" class="photo-size">
+                <img src = "tree.jpg" alt="" class="photo-size">
+                <img src = "umbrella.jpg" alt="" class="photo-size">
+                <img src = "waterfall.jpg" alt="" class="photo-size">
+                <img src = "winter.jpg" alt="" class="photo-size">
+                <img src = "woods.jpg" alt="" class="photo-size">
+                <img src = "wedding-dresss.jpg" alt="" class="photo-size">
+                <img src = "santa.jpg" alt="" class="photo-size">
+                <img src = "black-and-white.jpg" alt="" class="photo-size">
+                <img src = "basket-baby.jpg" alt="" class="photo-size">
+                <img src = "close-up.jpg" alt="" class="photo-size">
+                <img src = "corn.jpg" alt="" class="photo-size">
+                <img src = "cute-kiss.jpg" alt="" class="photo-size">
+                <img src = "boats.jpg" alt="" class="photo-size">
+                <img src = "couple.jpg" alt="" class="photo-size">
+                <img src = "fairy-child.jpg" alt="" class="photo-size">
+                <img src = "family-photo.jpg" alt="" class="photo-size">
+                <img src = "fly-away.jpg" alt="" class="photo-size">
+                <img src = "friends-large.jpg" alt="" class="photo-size">
+                <img src = "laying-down.jpg" alt="" class="photo-size">
+                <img src = "multiple.jpg" alt="" class="photo-size">
+                <img src = "princess-baby.jpg" alt="" class="photo-size">
+                <img src = "friends.jpg" alt="" class="photo-size">
+                <img src = "pose.jpg" alt="" class="photo-size">
+                <img src = "red-dress.jpg" alt="" class="photo-size">
+                <img src = "road.jpg" alt="" class="photo-size">
+                <img src = "santa.jpg" alt="" class="photo-size">
+                <img src = "two-kids.jpg" alt="" class="photo-size">
+                <img src = "underwater.jpg" alt="" class="photo-size">
+                <img src = "winter.jpg" alt="" class="photo-size">
+                <img src = "actress.jpg" alt="" class="photo-size">
+                <img src = "tribal.jpg" alt="" class="photo-size">
+                <img src = "sunlight.jpg" alt="" class="photo-size">
+                <img src = "candles.jpg" alt="" class="photo-size">
+                <img src = "pregnant.jpg" alt="" class="photo-size">
+                <img src = "rope.jpg" alt="" class="photo-size">
+                <img src = "lake.jpg" alt="" class="photo-size">
+                <img src = "tree-trunk.jpg" alt="" class="photo-size">
+                <img src = "besties.jpg" alt="" class="photo-size">
+                <img src = "dresses.jpg" alt="" class="photo-size">
+                <img src = "dramatic.jpg" alt="" class="photo-size">
+                <img src = "jump.jpg" alt="" class="photo-size">
+                <img src = "red-kiss.jpg" alt="" class="photo-size">
+                <img src = "sit.jpg" alt="" class="photo-size">
+                <img src = "piano.jpg" alt="" class="photo-size">
+                <img src = "kids.jpg" alt="" class="photo-size">
+                <img src = "hat-friends.jpg" alt="" class="photo-size">
+                <img src = "help.jpg" alt="" class="photo-size">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    const navHamburger = document.querySelector('#navHamburger');
+    navHamburger.addEventListener('click', (e) => {
+        navHamburger.parentElement.classList.toggle('active');
+    })
+</script>
+
+</html>
